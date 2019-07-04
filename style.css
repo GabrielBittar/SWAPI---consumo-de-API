@@ -4,6 +4,17 @@ body{
 
 h1{
   color: #FFA72B;
-  margin-left: 200px;
-  margin-top:200px;
+  font-family: 'Star Jedi', arial;
+}
+
+.main-box{
+  text-align: center;
+  margin-top: 20%;
+  display: grid;
+}
+
+.movie-detail{
+  height: 30px;
+  width: 80px;
+  text-align: center;
 }
