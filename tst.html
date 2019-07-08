@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	<!--CSS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+	<!--fontes-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
+    </head>
+    
+	<body>
+	
+<!-- Modal (Bootstrap), que é chamado na abertura dos detalhes -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Movie details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	  <!--as requisicoes AJAX do jQuery sao jogadas nesses slots-->
+      <div class="modal-body">
+		<h3>SPECIES:</h3>
+		<p id="mov-species"></p>
+		<h3>PLANETS:</h3>
+		<p id="mov-planets"></p>
+		<h3>CHARACTERS:</h3>
+		<p id="mov-chars"></p>
+		<h3>STARSHIPS:</h3>
+		<p id="mov-starships"></p>
+      </div>
+      <div class="modal-footer">
+	  <!--fecha a popup-->
+        <button type="button" class="btn btn-warning" data-dismiss="modal">May the FORCE be with you!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Título do website-->
+    <div class="main-box">
+      <h1>Star Wars : <span id="title-span">the (geeky) movie web</span></h1>
+    </div>
+
+<!--Corpo-->
+<div>
+
+ <hr/>
+ <img class="movieCover col-lg-4 col-md-2 col-sm-2 col-2" src="newHope-1.jpg"></img>
+ <div class="movieContent col-md-8 col-lg-9 col md-11 col-sm-14 col-16">
+ <h2 class="movie-titles">A New Hope</h2>
+ <h3>Director: George Lucas</h3>
+ <h3>Release: 1977, 05, 25.</h3>
+ <p><strong>Synopsis:</strong> It is a period of civil war. Rebel spaceships, striking from a hidden base, have won 
+ their first victory against the evil Galactic Empire. During the battle, Rebel spies managed to steal 
+ secret plans to the Empire's ultimate weapon, the DEATH STAR, an armored space station with enough power to 
+ destroy an entire planet. Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, 
+ custodian of the stolen plans that can save her people and restore freedom to the galaxy....</p>
+ <button type="button" class="btn btn-outline-warning firstButton" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+ </div>
+ <hr/>
+
+ <img class="movieCover col-lg-4 col-md-2 col-sm-2 col-2" src="empireStrikes-2.jpg"></img>
+ <div class="movieContent col-md-8 col-lg-9 col md-11 col-sm-14 col-16">
+ <h2>The Empire Strikes Back</h2>
+ <h3>Director: Irvin Kershner</h3>
+ <h3>Release: 1980, 05, 17.</h3>
+ <p><strong>Synopsis:</strong> It is a dark time for the Rebellion. Although the Death Star has been destroyed, 
+ Imperial troops have driven the Rebel forces from their hidden base and pursued them across the galaxy. 
+ Evading the dreaded Imperial Starfleet, a group of freedom fighters led by Luke Skywalker has established 
+ a new secret base on the remote ice world of Hoth. The evil lord Darth Vader, obsessed with finding young 
+ Skywalker, has dispatched thousands of remote probes into the far reaches of space....</p>
+ <button type="button" class="btn btn-outline-warning secondButton" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+ </div>
+ <hr/>
+
+ <img class="movieCover col-lg-4 col-md-2 col-sm-2 col-2" src="returnJedi-3.jpg"></img>
+ <div class="movieContent col-md-8 col-lg-9 col md-11 col-sm-14 col-16">
+ <h2>Return of the Jedi</h2>
+ <h3>Director: Richard Marquand</h3>
+ <h3>Release: 1983, 05, 25.</h3>
+ <p><strong>Synopsis:</strong> Luke Skywalker has returned to his home planet of Tatooine in an attempt 
+ to rescue his friend Han Solo from the clutches of the vile gangster Jabba the Hutt. Little does Luke 
+ know that the GALACTIC EMPIRE has secretly begun construction on a new armored space station even 
+ more powerful than the first dreaded Death Star. When completed, this ultimate weapon will spell 
+ certain doom for the small band of rebels struggling to restore freedom to the galaxy...</p>
+ <button type="button" class="btn btn-outline-warning thirdButton" data-toggle="modal" data-target="#exampleModalCenter">Details</button> 
+ </div>
+ <hr/>
+
+ <img class="movieCover col-lg-4 col-md-2 col-sm-2 col-2" src="phantomMenace-4.jpg"></img>
+ <div class="movieContent col-md-8 col-lg-9 col md-11 col-sm-14 col-16">
+ <h2>The Phantom Menace</h2>
+ <h3>Director: George Lucas</h3>
+ <h3>Release: 1999, 05, 19.</h3>
+ <p><strong>Synopsis:</strong> Turmoil has engulfed the Galactic Republic. The taxation of trade 
+ routes to outlying star systems is in dispute. Hoping to resolve the matter with a blockade of 
+ deadly battleships, the greedy Trade Federation has stopped all shipping to the small planet nof 
+ Naboo. While the Congress of the Republic endlessly debates this alarming chain of events, the 
+ Supreme Chancellor has secretly dispatched two Jedi Knights, the guardians of peace and justice 
+ in the galaxy, to settle the conflict....</p>
+ <button type="button" class="btn btn-outline-warning fourthButton" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+ </div>
+ <hr/>
+
+ <img class="movieCover col-lg-4 col-md-2 col-sm-2 col-2" src="attackOfClones-5.jpg"></img>
+ <div class="movieContent col-md-8 col-lg-9 col md-11 col-sm-14 col-16">
+ <h2>Attack of the Clones</h2>
+ <h3>Director: George Lucas</h3>
+ <h3>Release: 2002, 05, 16.</h3>
+ <p><strong>Synopsis:</strong> There is unrest in the Galactic Senate. Several thousand solar systems 
+ have declared their intentions to leave the Republic. This separatist movement, under the leadership 
+ of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain 
+ peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic 
+ Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....</p>
+ <button type="button" class="btn btn-outline-warning fifthButton" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+ </div>
+ <hr/>
+
+ <img class="movieCover col-lg-4 col-md-2 col-sm-2 col-2" src="revengeSith-6.jpg"></img>
+ <div class="movieContent col-md-8 col-lg-9 col md-11 col-sm-14 col-16">
+ <h2>Revenge of the Sith</h2>
+ <h3>Director: George Lucas</h3>
+ <h3>Release: 2005, 05, 19.</h3>
+ <p><strong>Synopsis:</strong> War! The Republic is crumbling under attacks by the ruthless Sith Lord, 
+ Count Dooku. There are heroes on both sides. Evil is everywhere. In a stunning move, the fiendish droid 
+ leader, General Grievous, has swept into the Republic capital and kidnapped Chancellor Palpatine, 
+ leader of the Galactic Senate. As the Separatist Droid Army attempts to flee the besieged capital with 
+ their valuable hostage, two Jedi Knights lead a desperate mission to rescue the captive Chancellor....</p>
+ <button type="button" class="btn btn-outline-warning sixthButton" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+ </div>
+
+ <hr/>
+
+ <img class="movieCover col-lg-4 col-md-2 col-sm-2 col-2" src="forceAwakens-7.jpg"></img>
+ <div class="movieContent col-md-8 col-lg-9 col md-11 col-sm-14 col-16">
+ <h2>The Force Awakens</h2>
+ <h3>Director: J. J. Abrams</h3>
+ <h3>Release: 2015, 12, 11.</h3>
+ <p><strong>Synopsis:</strong> Luke Skywalker has vanished. In his absence, the sinister FIRST ORDER 
+ has risen from the ashes of the Empire and will not rest until Skywalker, the last Jedi, has been destroyed. 
+ With the support of the REPUBLIC, General Leia Organa leads a brave RESISTANCE. She is desperate to find her
+ brother Luke and gain his help in restoring peace and justice to the galaxy. Leia has sent her most daring 
+ pilot on a secret mission to Jakku, where an old ally has discovered a clue to Luke's whereabouts....</p>
+ <button type="button" class="btn btn-outline-warning seventhButton" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+ </div>
+ <hr/>
+
+</div>
+
+<!--Rodape-->
+<div class="footer">
+<p class="footer-text"><i>Gabriel Bittar Domingues.</i></p>
+<p class="footer-text"><i>Github: GabrielBittar</i></p>
+<p class="footer-text"><i>2019</i></p>
+
+</div>
+
+<!--JS, jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+				//função principal, que começa o funcionamento da primeira ajax com base no número do filme,
+				//que recebe por meio do botão details numerado.
+               function ajaxWork(filmNumber) {
+			   
+				//fornece o numero do filme solicitado à url de base
+                var internalFilmNumber = filmNumber;
+				
+				//limpa todos os campos antes de preencher novamente com o append
+				$("#mov-planets").empty();
+				$("#mov-chars").empty();
+				$("#mov-species").empty();
+				$("#mov-starships").empty();
+                
+				//requisicao AJAX do filme escolhido
+                $.ajax({
+                    type: "GET",
+                    contentType: "application/json",
+					//internalFilmNumber entra aqui
+                    url: "https://swapi.co/api/films/" + internalFilmNumber,
+                    dataType: "json",
+                    success: function(data) {
+
+//começo da requisicao de characters. Entra no array e vê quantos tem
+for(var i = 0; i < data.characters.length; i ++){
+
+//pega os links de cada slot do JSON
+var personLink = data.characters[i];
+
+$.ajax({
+                    type: "GET",
+                    contentType: "application/json",
+					//usa o link, um por vez
+                    url: personLink,
+                    dataType: "json",
+					async: true,
+                    success: function(data) {
+						
+//seleciona o espaço onde vai jogar o nome do character.						
+var characterSlot = document.getElementById("mov-chars");
+//joga o nome do character no espaço selecionado.
+characterSlot.appendChild(document.createTextNode(data.name + " | "));
+}});
+}
+
+//começo da requisicao de planets
+for(var i = 0; i < data.planets.length; i ++){
+
+var planetaLink = data.planets[i];
+
+$.ajax({
+                    type: "GET",
+                    contentType: "application/json",
+                    url: planetaLink,
+                    dataType: "json",
+					async: true,
+                    success: function(data) {
+
+var planetsSlot = document.getElementById("mov-planets");
+planetsSlot.appendChild(document.createTextNode(data.name + " | "));
+
+}});
+}
+
+//começo da requisicao de especies
+for(var i = 0; i < data.species.length; i ++){
+
+var especieLink = data.species[i];
+
+$.ajax({
+                    type: "GET",
+                    contentType: "application/json",
+                    url: especieLink,
+                    dataType: "json",
+					async: true,
+                    success: function(data) {
+
+var speciesSlot = document.getElementById("mov-species");
+speciesSlot.appendChild(document.createTextNode(data.name + " | "));
+
+}});
+}
+
+//começo da requisicao de naves espaciais
+for(var i = 0; i < data.starships.length; i ++){
+
+var starshipsLink = data.starships[i];
+
+$.ajax({
+                    type: "GET",
+                    contentType: "application/json",
+                    url: starshipsLink,
+                    dataType: "json",
+					async: true,
+                    success: function(data) {
+
+var starshipsSlot = document.getElementById("mov-starships");
+starshipsSlot.appendChild(document.createTextNode(data.name + " | "));
+
+}});
+
+}
+
+}
+});}
+
+//cada botao tem um classe que é usada aqui para identificacao.
+//cada um passa o numero correspondente no argumento da ajaxWork();.
+$(".firstButton").click(function(){
+ajaxWork(1);
+});
+
+$(".secondButton").click(function(){
+ajaxWork(2);
+});
+
+$(".thirdButton").click(function(){
+ajaxWork(3);
+});
+
+$(".fourthButton").click(function(){
+ajaxWork(4);
+});
+
+$(".fifthButton").click(function(){
+ajaxWork(5);
+});
+
+$(".sixthButton").click(function(){
+ajaxWork(6);
+});
+
+$(".seventhButton").click(function(){
+ajaxWork(7);
+});
+
+</script>
+<!--JS do Bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
